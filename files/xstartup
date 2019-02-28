@@ -1,0 +1,10 @@
+#!/bin/sh
+
+unset SESSION_MANAGER
+
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+
+xsetroot -solid "#247BA0"
+vncconfig -nowin &
+
+exec /etc/X11/Xsession jwm
